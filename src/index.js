@@ -1,17 +1,68 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+function App() {
+  return (
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <Intro />
+        {/* Should contain one Skill component
+        for each web dev skill that you have,
+        customized with props */}
+        <SkillList />
+      </div>
+    </div>
+  );
+}
+
+function Avatar() {
+  return <img src="./image0.jpeg" className="avatar"></img>;
+}
+
+function Intro() {
+  return (
+    <div>
+      <h1>Daniel Sims</h1>
+      <p>
+        Database developer and aspiring full-stack web developer. When not
+        coding, I enjoy playing board games, table top games (wargames,
+        adventure, etc.), trading card games, and video games.{" "}
+      </p>
+    </div>
+  );
+}
+
+function SkillList() {
+  return (
+    <div className="skill-list">
+      <Skill skill="React" emoji="✌️" color="lightblue" />
+      <Skill skill="Angular" emoji="✌️" color="orangered" />
+      <Skill skill="HTML+CSS" emoji="✌️" color="red" />
+      <Skill skill="JavaScript" emoji="✌️" color="yellow" />
+      <Skill skill="TypeScript" emoji="✌️" color="green" />
+      <Skill skill="Next.JS" emoji="✌️" color="orange" />
+      <Skill skill="MSSQL" emoji="✌️" color="purple" />
+      <Skill skill="Git + GitHub" emoji="✌️" color="yellowgreen" />
+    </div>
+  );
+}
+
+function Skill(props) {
+  return (
+    <div className="skill" style={{ backgroundColor: props.color }}>
+      <span>{props.skill}</span>
+      <span>{props.emoji}</span>
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
