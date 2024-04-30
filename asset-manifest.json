@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/developer-card/static/css/main.c3258e33.css",
+    "main.js": "/developer-card/static/js/main.c6cab867.js",
+    "index.html": "/developer-card/index.html",
+    "main.c3258e33.css.map": "/developer-card/static/css/main.c3258e33.css.map",
+    "main.c6cab867.js.map": "/developer-card/static/js/main.c6cab867.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3258e33.css",
+    "static/js/main.c6cab867.js"
+  ]
+}
