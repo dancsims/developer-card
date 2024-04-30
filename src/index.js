@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
+import profile from './profile.jpeg';
 
 const skills = [
   { skill: "React", level: "intermediate", color: "lightblue" },
@@ -34,7 +35,7 @@ function App() {
 }
 
 function Avatar() {
-  return <img src="./profile.jpeg" className="avatar" alt="profile"></img>;
+  return <img src={profile} className="avatar" alt="profile"></img>;
 }
 
 function Intro() {
